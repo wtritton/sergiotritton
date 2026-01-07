@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones | Bufete Legal Tritton Brown</title>
+    <meta name="description" content="Términos y condiciones de uso del sitio web del Bufete Legal Venezolano.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1e3a;
+            --primary-light: #1a2e4a;
+            --secondary: #b89146;
+            --secondary-light: #c8a156;
+            --accent: #b89146;
+            --light: #f5f5f5;
+            --dark: #333333;
+            --gray: #555555; /* Cambiado de #666666 para más contraste */
+            --light-gray: #777777; /* Cambiado de #999999 para más contraste */
+            --white: #ffffff;
+            --success: #0a1e3a;
+            --bg-secondary: #f5f5f5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(184, 145, 70, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 145, 70, 0.4);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .section {
+            padding: 6rem 0 4rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        .terms-content {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--light-gray);
+        }
+        .terms-content h2 {
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .terms-content h3 {
+            margin: 1.25rem 0 0.75rem;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+        .terms-content p, .terms-content ul, .terms-content ol {
+            margin-bottom: 1rem;
+            color: var(--gray);
+            font-weight: 300;
+        }
+        .terms-content ul {
+            padding-left: 1.5rem;
+        }
+        .terms-content li {
+            margin-bottom: 0.5rem;
+        }
+        /* Header */
+        header {
+            background-color: var(--primary);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+        .logo-text h1 {
+            font-size: 1.75rem;
+            color: var(--white);
+            margin: 0;
+        }
+        .logo-text p {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            font-weight: 300;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        .footer-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 300;
+        }
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        .footer-copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            margin-top: 2rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .section {
+                padding: 4rem 0 2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="equipo.html">Equipo de Expertos</a>
+                <a href="index.html#servicios">Áreas de Prácticas</a>
+                <a href="index.html#testimonios">Testimonios</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Terms Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-title">Términos y Condiciones</h1>
+            </div>
+            <div class="terms-content">
+                <p><strong>Por favor, lea estos términos y condiciones detenidamente antes de utilizar Nuestro Sitio Web.</strong></p>
+
+                <h2>Interpretación y Definiciones</h2>
+                <h3>Interpretación</h3>
+                <p>Las palabras cuya letra inicial está en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de que aparezcan en singular o en plural.</p>
+
+                <h3>Definiciones</h3>
+                <p>A los efectos de estos Términos y Condiciones:</p>
+                <ul>
+                    <li><strong>Afiliado</strong> significa una entidad que controla, es controlada por o está bajo control común con una parte, donde "control" significa la propiedad del 50% o más de las acciones, participación en el capital u otros valores con derecho a voto para la elección de directores u otra autoridad gerencial.</li>
+                    <li><strong>País</strong> se refiere a: República Bolivaria de Venezuela.</li>
+                    <li><strong>Firma</strong> (denominada como "la Firma", "Nosotros", "Nuestro" o "Nuestra" en este Acuerdo) se refiere a Tritton Brown.</li>
+                    <li><strong>Dispositivo</strong> significa cualquier dispositivo que pueda acceder al Sitio Web, como una computadora, un teléfono celular o una tableta digital.</li>
+                    <li><strong>Sitio Web</strong> se refiere al sitio web ubicado en www.trittonbrown.com.</li>
+                    <li><strong>Términos y Condiciones</strong> (también denominados "Términos") significan estos Términos y Condiciones que forman el acuerdo completo entre Usted y la Firma con respecto al uso del Sitio Web.</li>
+                    <li><strong>Sitio Web de Redes Sociales de Terceros</strong> significa cualquier sitio web o servicio (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Sitio Web.</li>
+                    <li><strong>Usted</strong> significa el individuo que accede o utiliza el Sitio Web, o la Firma, u otra entidad legal en nombre de la cual dicho individuo accede o utiliza el Sitio Web, según corresponda.</li>
+                </ul>
+
+                <h2>Reconocimiento</h2>
+                <p>Estos son los Términos y Condiciones que rigen el uso de este Sitio Web y el acuerdo que se establece entre Usted y la Firma. Estos Términos y Condiciones establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Sitio Web.</p>
+                <p>Su acceso y uso del Sitio Web está condicionado a la aceptación y el cumplimiento de estos Términos y Condiciones. Estos Términos y Condiciones se aplican a todos los visitantes, usuarios y demás personas que accedan o utilicen el Sitio Web.</p>
+                <p>Al acceder o utilizar el Sitio Web, Usted acepta estar obligado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos Términos y Condiciones, entonces no podrá acceder al Sitio Web.</p>
+                <p>Usted declara que es mayor de 18 años. La Firma no permite el uso del Sitio Web a menores de 18 años.</p>
+                <p>Su acceso y uso del Sitio Web también está condicionado a la aceptación y el cumplimiento de la Política de Privacidad de la Firma. Nuestra Política de Privacidad describe Nuestras políticas y procedimientos sobre la recopilación, el uso y la divulgación de Su información personal cuando utiliza la Aplicación o el Sitio Web y le informa sobre Sus derechos de privacidad y cómo la ley lo protege. Por favor, lea Nuestra Política de Privacidad detenidamente antes de usar Nuestro Sitio Web.</p>
+
+                <h2>Enlaces a Otros Sitios Web</h2>
+                <p>Nuestro Sitio Web puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están controlados por la Firma.</p>
+                <p>La Firma no tiene control y no asume ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de ningún sitio web o servicio de terceros. Usted además reconoce y acepta que la Firma no será responsable ni liable, directa o indirectamente, por cualquier daño o pérdida causada o alegadamente causada por o en conexión con el uso o la confianza en cualquier contenido, bienes o servicios disponibles en o a través de cualquier de dichos sitios web o servicios.</p>
+                <p>Le recomendamos encarecidamente que lea los términos y condiciones y las políticas de privacidad de cualquier sitio web o servicio de terceros que visite.</p>
+
+                <h2>Terminación</h2>
+                <p>Podemos terminar o suspender Su acceso inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluido, entre otros, si incumple estos Términos y Condiciones.</p>
+                <p>En caso de rescisión, su derecho de utilizar el sitio web cesará inmediatamente.</p>
+
+                <h2>Limitación de Responsabilidad</h2>
+                <p>A pesar de cualquier daño en que Usted pudiera incurrir, la responsabilidad total de la Firma y cualquiera de sus proveedores bajo cualquier disposición de estos Términos y Su recurso exclusivo por todo lo anterior se limitará a la cantidad realmente pagada por Usted a través del Sitio Web o 100 USD si no ha comprado nada a través del Sitio Web.</p>
+                <p>En la medida máxima permitida por la ley aplicable, en ningún caso la Firma o sus proveedores serán responsables por daños especiales, incidentales, indirectos o consecuentes de cualquier tipo (incluidos, entre otros, daños por pérdida de ganancias, pérdida de datos u otra información, por interrupción del negocio, por lesiones personales, pérdida de privacidad que surja de o esté relacionada de cualquier manera con el uso o la incapacidad de usar el Sitio Web, software de terceros y/o hardware de terceros utilizado con el Sitio Web, o de otra manera en conexión con cualquier disposición de estos Términos), incluso si la Firma o cualquier proveedor ha sido advertido de la posibilidad de tales daños y incluso si el recurso falla en su propósito esencial.</p>
+                <p>Algunos estados no permiten la exclusión de garantías implícitas o la limitación de responsabilidad por daños incidentales o consecuentes, lo que significa que algunas de las limitaciones anteriores pueden no aplicar. En estos estados, la responsabilidad de cada parte se limitará en la mayor medida permitida por la ley.</p>
+
+                <h2>Exención de Responsabilidad "TAL CUAL" y "SEGÚN DISPONIBILIDAD"</h2>
+                <p>El Sitio Web se le proporciona a Usted "TAL CUAL" y "SEGÚN DISPONIBILIDAD" y con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Firma, en su propio nombre y en nombre de sus Afiliados y sus respectivos licenciantes y proveedores de servicios, rechaza expresamente todas las garantías, ya sean expresas, implícitas, estatutarias o de otro tipo, con respecto al Sitio Web, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir en el curso de los negocios, curso del desempeño, uso o práctica comercial.</p>
+                <p>Sin limitación a lo anterior, la Firma no proporciona ninguna garantía o compromiso, y no hace ninguna representación de ningún tipo de que el Sitio Web cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicaciones, sistemas o servicios, operará sin interrupciones, cumplirá con ningún estándar de rendimiento o confiabilidad o estará libre de errores o que cualquier error o defecto pueda o será corregido.</p>
+
+                <h2>Indemnización</h2>
+                <p>Usted acepta defender, indemnizar y mantener indemne a la Firma y sus socios, empleados, afiliados, agentes, contratistas y representantes (las "Partes de la Firma") de y contra todas las reclamaciones, pérdidas, costos, daños, responsabilidades y gastos (incluidos, entre otros, los honorarios de abogados) que surjan de o se relacionen con: (i) Su uso del SITIO WEB; (ii) cualquier violación por Su parte de este ACUERDO; o (iii) Su envío a la Firma por medio del SITIO WEB de información u otros datos incompletos, inexactos o no oportunos. Las Partes de la Firma tendrán el derecho, pero no la obligación, de participar a través de un abogado de su elección en cualquier defensa por parte de Usted bajo esta Sección.</p>
+
+                <h2>Ley Aplicable</h2>
+                <p>Las leyes de la República Bolivaria de Venezuela, excluyendo sus normas de conflicto de leyes, regirán estos Términos y Su uso del Sitio Web, con jurisdicción exclusiva en la República Bolivaria de Venezuela.</p>
+
+                <h2>Cumplimiento Legal de la República Bolivaria de Venezuela</h2>
+                <p>Usted declara y garantiza que (i) no se encuentra en un país que esté sujeto al embargo del gobierno de la República Bolivaria de Venezuela, o que haya sido designado por el gobierno de los Estados Unidos como un país "que apoya el terrorismo", y (ii) no está incluido en ninguna lista del gobierno de los Estados Unidos de partes prohibidas o restringidas.</p>
+
+                <h2>Separabilidad y Renuncia</h2>
+                <h3>Separabilidad</h3>
+                <p>Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se modificará e interpretará para lograr los objetivos de dicha disposición en la mayor medida posible bajo la ley aplicable y las disposiciones restantes continuarán en pleno vigor y efecto.</p>
+                <h3>Renuncia</h3>
+                <p>Excepto según se dispone salvo o a menos que se especifique lo contrario, el hecho de que una parte no ejerza un derecho o no exija el cumplimiento de una obligación en virtud de estos Términos no afectará la capacidad de dicha parte para ejercer dicho derecho o exigir dicho cumplimiento en cualquier momento posterior, ni la renuncia a una infracción constituirá una renuncia a cualquier infracción posterior.</p>
+
+                <h2>Interpretación de la Traducción</h2>
+                <p>Estos Términos y Condiciones pueden haber sido traducidos si los hemos puesto a su disposición en nuestro Sitio Web. Usted acepta que el texto original en inglés prevalecerá en caso de una disputa.</p>
+
+                <h2>Cambios a Estos Términos y Condiciones</h2>
+                <p>Nos reservamos el derecho, a Nuestra entera discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, haremos esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que cualquier nuevo término entre en vigencia. Lo que constituye un cambio material se determinará a Nuestra entera discreción.</p>
+                <p>Al continuar accediendo o utilizando Nuestro Sitio Web después de que esas revisiones entren en vigor, Usted acepta estar obligado por los términos revisados. Si no está de acuerdo con los nuevos términos, en su totalidad o en parte, deje de usar el sitio web y el Servicio.</p>
+
+                <h2>Contáctenos</h2>
+                <p>Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos:</p>
+                <p>Por correo electrónico: <a href="mailto:info@trittonbrown.com" style="color: var(--secondary); text-decoration: underline;">info@trittonbrown.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-scale-balanced"></i>
+                        </div>
+                        <span>Bufete Legal Tritton Brown</span>
+                    </div>
+                    <p class="footer-description">Más de 25 años defendiendo los derechos de nuestros clientes en Venezuela con profesionalismo y ética jurídica de excelencia.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Áreas de Práctica</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contacto</h4>
+                    <p style="color: rgba(255,255,255,0.8); font-weight: 300;">
+                        <i class="fas fa-envelope"></i> info@trittonbrown.com<br>
+                        <i class="fas fa-phone"></i> (414) 414-495-4905
+                    </p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Creado por WMT. Todos los derechos reservados.</p>
+                <p>Colegiados en el Colegio de Abogados de Venezuela</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
